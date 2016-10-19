@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/hotel_activity_main_click_style">
+    
+    <TextView 
+        android:id="@+id/dialog_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dp"
+        android:gravity="center_vertical"
+    android:maxLines="1"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15.0sp"
+        android:layout_marginLeft="10.0dip">
+    </TextView>
+</LinearLayout>
