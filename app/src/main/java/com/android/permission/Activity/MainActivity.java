@@ -14,12 +14,11 @@ import com.android.permission.request.PermissionRequest;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, PermissionCallBack {
-  private Button btn_camera;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    btn_camera = (Button) findViewById(R.id.camera);
+    Button btn_camera = (Button) findViewById(R.id.camera);
     btn_camera.setOnClickListener(this);
   }
 
@@ -32,13 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-    PermissionRequest.onRequestPermissionsResult(MainActivity.this,requestCode, permissions, grantResults);
+    PermissionRequest.onRequestPermissionsResult(MainActivity.this, requestCode, permissions, grantResults);
   }
 
   @Override public void onPermissionGranted(int requestCode, List<String> perms) {
     //已经授权
     Toast.makeText(this, "已经授权", Toast.LENGTH_SHORT).show();
-
   }
 
   @Override public void onPermissionDenied(int requestCode, List<String> perms) {
